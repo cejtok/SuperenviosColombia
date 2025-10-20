@@ -1,18 +1,3 @@
-name: 🚀 Deploy automático a AlwaysData (FTP)
-
-on:
-  push:
-    branches:
-      - main  # Cambia si usas 'master'
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 📦 Clonar el repositorio
-        uses: actions/checkout@v4
-
       - name: 🚀 Subir archivos al hosting vía FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -20,8 +5,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
+          port: 21
           server-dir: ${{ secrets.FTP_TARGET }}/
-          local-dir: ./  # sube todo lo del repo
+          local-dir: ./   # sube todo lo del repo
           exclude: |
             **/.git*
             **/.github*
