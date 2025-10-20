@@ -22,7 +22,7 @@ jobs:
           server-dir: ${{ secrets.FTP_TARGET }}/
           port: 21
           protocol: ftps
-          security: implicit        
+          security: strict        
           local-dir: ./
           exclude: |
             **/.git*
