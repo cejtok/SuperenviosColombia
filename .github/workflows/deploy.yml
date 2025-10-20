@@ -19,10 +19,10 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_TARGET }}/
           port: 21
           protocol: ftps
-          security: strict        # ✅ Cambiado de implicit → strict
-          server-dir: ${{ secrets.FTP_TARGET }}/
+          security: implicit        
           local-dir: ./
           exclude: |
             **/.git*
