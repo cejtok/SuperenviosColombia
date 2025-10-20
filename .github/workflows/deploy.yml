@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           protocol: ftps
-          security: "implicit"   # <--- CAMBIO CLAVE (usa conexión FTPS cifrada)
+          security: strict        # ✅ Cambiado de implicit → strict
           server-dir: ${{ secrets.FTP_TARGET }}/
           local-dir: ./
           exclude: |
