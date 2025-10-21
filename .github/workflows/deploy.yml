@@ -1,14 +1,11 @@
 name: 🚀 Deploy to AlwaysData
-
 on:
   push:
     branches:
       - main  # o la rama que uses
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: 📦 Clonar repositorio
         uses: actions/checkout@v4
@@ -30,3 +27,4 @@ jobs:
             **/README.md
             **/node_modules/**
             **/.env
+
