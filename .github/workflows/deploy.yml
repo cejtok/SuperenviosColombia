@@ -27,4 +27,3 @@ jobs:
             **/README.md
             **/node_modules/**
             **/.env
-
